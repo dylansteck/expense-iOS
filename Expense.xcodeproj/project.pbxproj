@@ -18,6 +18,8 @@
 		7F54194D1D2C50EC0041D47A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F54194C1D2C50EC0041D47A /* Assets.xcassets */; };
 		7F5419501D2C50EC0041D47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F54194E1D2C50EC0041D47A /* LaunchScreen.storyboard */; };
 		7FC2DE001D2D4E2B0062F7B2 /* Expense-long.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7FC2DDFF1D2D4E2B0062F7B2 /* Expense-long.gif */; };
+		7FDA0E331D2DA2210030ED81 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E321D2DA2210030ED81 /* Payment.swift */; };
+		7FDA0E371D2DA2E50030ED81 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E361D2DA2E50030ED81 /* ParseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		7F54194F1D2C50EC0041D47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F5419511D2C50EC0041D47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FC2DDFF1D2D4E2B0062F7B2 /* Expense-long.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Expense-long.gif"; path = "../../../Expen$e Logos/from AI/Expense-long.gif"; sourceTree = "<group>"; };
+		7FDA0E321D2DA2210030ED81 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Payment.swift; path = ../Payment.swift; sourceTree = "<group>"; };
+		7FDA0E361D2DA2E50030ED81 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		7F5419441D2C50EC0041D47A /* Expense */ = {
 			isa = PBXGroup;
 			children = (
+				7FDA0E351D2DA2C80030ED81 /* Helpers */,
+				7FDA0E341D2DA2530030ED81 /* Models */,
 				7F2E70381D2D42F60094F8EE /* Answers.framework */,
 				7F5419451D2C50EC0041D47A /* AppDelegate.swift */,
 				7F5419471D2C50EC0041D47A /* ViewController.swift */,
@@ -84,6 +90,22 @@
 				7F2E70331D2D40050094F8EE /* TwitterCore.framework */,
 			);
 			path = Expense;
+			sourceTree = "<group>";
+		};
+		7FDA0E341D2DA2530030ED81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA0E321D2DA2210030ED81 /* Payment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FDA0E351D2DA2C80030ED81 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA0E361D2DA2E50030ED81 /* ParseHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5419481D2C50EC0041D47A /* ViewController.swift in Sources */,
+				7FDA0E331D2DA2210030ED81 /* Payment.swift in Sources */,
 				7F5419461D2C50EC0041D47A /* AppDelegate.swift in Sources */,
+				7FDA0E371D2DA2E50030ED81 /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

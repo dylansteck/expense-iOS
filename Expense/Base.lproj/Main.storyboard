@@ -18,21 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Expense-long.gif" translatesAutoresizingMaskIntoConstraints="NO" id="yMI-hW-DQu">
-                                <rect key="frame" x="148" y="53" width="323" height="113"/>
+                                <rect key="frame" x="140" y="53" width="331" height="113"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k65-Gl-JOC">
-                                <rect key="frame" x="247" y="400" width="107" height="30"/>
-                                <state key="normal" title="Awesomeoness"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k65-Gl-JOC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jc7-By-hpR"/>
                             <constraint firstItem="yMI-hW-DQu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OjH-Tc-0aa"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coolButton" destination="k65-Gl-JOC" id="abM-xL-G8H"/>
+                        <outlet property="topLogo" destination="yMI-hW-DQu" id="zfA-xN-2Cu"/>
                         <segue destination="57L-xp-68Y" kind="show" identifier="loginSegue" id="hiG-3o-rrK"/>
                     </connections>
                 </viewController>
@@ -63,11 +58,31 @@
                             <outlet property="delegate" destination="mnP-zk-gp5" id="yLf-py-tbe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Payments" id="SDk-D2-b6P"/>
+                    <navigationItem key="navigationItem" title="Payments" id="SDk-D2-b6P">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dBI-bj-Xfk"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMt-Vp-rOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1829" y="315"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ctO-Zn-bty">
+            <objects>
+                <viewController id="Oiv-u8-Wbd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gPa-xY-8Ch"/>
+                        <viewControllerLayoutGuide type="bottom" id="i3J-e4-dz7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RTj-1q-RkP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNH-sa-z8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2491" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HpO-Uc-XZ9">

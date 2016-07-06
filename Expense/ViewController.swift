@@ -10,13 +10,14 @@ import UIKit
 import DigitsKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var coolButton: UIButton!
+
+    @IBOutlet weak var topLogo: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        coolButton.alpha = 0.0
-        UIView.animateWithDuration(2.0) { 
-            self.coolButton.alpha = 1.0
+        topLogo.alpha = 0.0
+        UIView.animateWithDuration(2.0) {
+            self.topLogo.alpha = 1.0
         }
 //        UIView.animateWithDuration(<#T##duration: NSTimeInterval##NSTimeInterval#>, animations: <#T##() -> Void#>)
         // Do any additional setup after loading the view, typically from a nib.
