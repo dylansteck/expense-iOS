@@ -13,14 +13,38 @@
 		7F2E70371D2D40050094F8EE /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2E70331D2D40050094F8EE /* TwitterCore.framework */; };
 		7F2E70391D2D42F60094F8EE /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2E70381D2D42F60094F8EE /* Answers.framework */; };
 		7F5419461D2C50EC0041D47A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5419451D2C50EC0041D47A /* AppDelegate.swift */; };
-		7F5419481D2C50EC0041D47A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5419471D2C50EC0041D47A /* ViewController.swift */; };
 		7F54194B1D2C50EC0041D47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5419491D2C50EC0041D47A /* Main.storyboard */; };
 		7F54194D1D2C50EC0041D47A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F54194C1D2C50EC0041D47A /* Assets.xcassets */; };
 		7F5419501D2C50EC0041D47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F54194E1D2C50EC0041D47A /* LaunchScreen.storyboard */; };
 		7FC2DE001D2D4E2B0062F7B2 /* Expense-long.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7FC2DDFF1D2D4E2B0062F7B2 /* Expense-long.gif */; };
-		7FDA0E331D2DA2210030ED81 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E321D2DA2210030ED81 /* Payment.swift */; };
-		7FDA0E371D2DA2E50030ED81 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E361D2DA2E50030ED81 /* ParseHelper.swift */; };
+		7FDA0E411D2E9DBB0030ED81 /* long1234.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDA0E401D2E9DBB0030ED81 /* long1234.png */; };
+		7FDA0E441D2EA2940030ED81 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E431D2EA2940030ED81 /* NSDate+convertToString.swift */; };
+		7FDA0E4A1D2ECFFD0030ED81 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDA0E481D2ECFFD0030ED81 /* Realm.framework */; };
+		7FDA0E4B1D2ECFFD0030ED81 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDA0E481D2ECFFD0030ED81 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FDA0E4C1D2ECFFD0030ED81 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDA0E491D2ECFFD0030ED81 /* RealmSwift.framework */; };
+		7FDA0E4D1D2ECFFD0030ED81 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDA0E491D2ECFFD0030ED81 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FDA0E581D2ED37D0030ED81 /* DisplayPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E511D2ED37D0030ED81 /* DisplayPaymentViewController.swift */; };
+		7FDA0E591D2ED37D0030ED81 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E521D2ED37D0030ED81 /* InitialViewController.swift */; };
+		7FDA0E5A1D2ED37D0030ED81 /* ListPaymentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E531D2ED37D0030ED81 /* ListPaymentsTableViewController.swift */; };
+		7FDA0E5B1D2ED37D0030ED81 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E561D2ED37D0030ED81 /* Payment.swift */; };
+		7FDA0E5D1D2ED4140030ED81 /* ListPaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E5C1D2ED4140030ED81 /* ListPaymentsTableViewCell.swift */; };
+		7FDA0E5F1D2ED42B0030ED81 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA0E5E1D2ED42B0030ED81 /* RealmHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7FDA0E4E1D2ECFFD0030ED81 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7FDA0E4D1D2ECFFD0030ED81 /* RealmSwift.framework in Embed Frameworks */,
+				7FDA0E4B1D2ECFFD0030ED81 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7F2E70301D2D40050094F8EE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -30,14 +54,21 @@
 		7F2E70381D2D42F60094F8EE /* Answers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Answers.framework; sourceTree = SOURCE_ROOT; };
 		7F5419421D2C50EC0041D47A /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5419451D2C50EC0041D47A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F5419471D2C50EC0041D47A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F54194A1D2C50EC0041D47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F54194C1D2C50EC0041D47A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F54194F1D2C50EC0041D47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F5419511D2C50EC0041D47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FC2DDFF1D2D4E2B0062F7B2 /* Expense-long.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Expense-long.gif"; path = "../../../Expen$e Logos/from AI/Expense-long.gif"; sourceTree = "<group>"; };
-		7FDA0E321D2DA2210030ED81 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Payment.swift; path = ../Payment.swift; sourceTree = "<group>"; };
-		7FDA0E361D2DA2E50030ED81 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		7FDA0E401D2E9DBB0030ED81 /* long1234.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = long1234.png; path = ../../../long1234.png; sourceTree = "<group>"; };
+		7FDA0E431D2EA2940030ED81 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+convertToString.swift"; sourceTree = "<group>"; };
+		7FDA0E481D2ECFFD0030ED81 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		7FDA0E491D2ECFFD0030ED81 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		7FDA0E511D2ED37D0030ED81 /* DisplayPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPaymentViewController.swift; sourceTree = "<group>"; };
+		7FDA0E521D2ED37D0030ED81 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		7FDA0E531D2ED37D0030ED81 /* ListPaymentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPaymentsTableViewController.swift; sourceTree = "<group>"; };
+		7FDA0E561D2ED37D0030ED81 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		7FDA0E5C1D2ED4140030ED81 /* ListPaymentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPaymentsTableViewCell.swift; sourceTree = "<group>"; };
+		7FDA0E5E1D2ED42B0030ED81 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDA0E4A1D2ECFFD0030ED81 /* Realm.framework in Frameworks */,
 				7F2E70391D2D42F60094F8EE /* Answers.framework in Frameworks */,
+				7FDA0E4C1D2ECFFD0030ED81 /* RealmSwift.framework in Frameworks */,
 				7F2E70341D2D40050094F8EE /* Fabric.framework in Frameworks */,
 				7F2E70371D2D40050094F8EE /* TwitterCore.framework in Frameworks */,
 				7F2E70351D2D40050094F8EE /* DigitsKit.framework in Frameworks */,
@@ -58,6 +91,8 @@
 		7F5419391D2C50EC0041D47A = {
 			isa = PBXGroup;
 			children = (
+				7FDA0E481D2ECFFD0030ED81 /* Realm.framework */,
+				7FDA0E491D2ECFFD0030ED81 /* RealmSwift.framework */,
 				7F5419441D2C50EC0041D47A /* Expense */,
 				7F5419431D2C50EC0041D47A /* Products */,
 			);
@@ -74,13 +109,16 @@
 		7F5419441D2C50EC0041D47A /* Expense */ = {
 			isa = PBXGroup;
 			children = (
-				7FDA0E351D2DA2C80030ED81 /* Helpers */,
-				7FDA0E341D2DA2530030ED81 /* Models */,
+				7FDA0E501D2ED37D0030ED81 /* Controllers */,
+				7FDA0E541D2ED37D0030ED81 /* Helpers */,
+				7FDA0E551D2ED37D0030ED81 /* Models */,
+				7FDA0E571D2ED37D0030ED81 /* Views */,
+				7FDA0E421D2EA2940030ED81 /* Extensions */,
 				7F2E70381D2D42F60094F8EE /* Answers.framework */,
 				7F5419451D2C50EC0041D47A /* AppDelegate.swift */,
-				7F5419471D2C50EC0041D47A /* ViewController.swift */,
 				7F5419491D2C50EC0041D47A /* Main.storyboard */,
 				7F54194C1D2C50EC0041D47A /* Assets.xcassets */,
+				7FDA0E401D2E9DBB0030ED81 /* long1234.png */,
 				7FC2DDFF1D2D4E2B0062F7B2 /* Expense-long.gif */,
 				7F54194E1D2C50EC0041D47A /* LaunchScreen.storyboard */,
 				7F5419511D2C50EC0041D47A /* Info.plist */,
@@ -92,20 +130,46 @@
 			path = Expense;
 			sourceTree = "<group>";
 		};
-		7FDA0E341D2DA2530030ED81 /* Models */ = {
+		7FDA0E421D2EA2940030ED81 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7FDA0E321D2DA2210030ED81 /* Payment.swift */,
+				7FDA0E431D2EA2940030ED81 /* NSDate+convertToString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7FDA0E501D2ED37D0030ED81 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA0E511D2ED37D0030ED81 /* DisplayPaymentViewController.swift */,
+				7FDA0E521D2ED37D0030ED81 /* InitialViewController.swift */,
+				7FDA0E531D2ED37D0030ED81 /* ListPaymentsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7FDA0E541D2ED37D0030ED81 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA0E5E1D2ED42B0030ED81 /* RealmHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7FDA0E551D2ED37D0030ED81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA0E561D2ED37D0030ED81 /* Payment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7FDA0E351D2DA2C80030ED81 /* Helpers */ = {
+		7FDA0E571D2ED37D0030ED81 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7FDA0E361D2DA2E50030ED81 /* ParseHelper.swift */,
+				7FDA0E5C1D2ED4140030ED81 /* ListPaymentsTableViewCell.swift */,
 			);
-			path = Helpers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +183,8 @@
 				7F54193F1D2C50EC0041D47A /* Frameworks */,
 				7F5419401D2C50EC0041D47A /* Resources */,
 				7F2E702E1D2D3FD00094F8EE /* Run Script */,
+				7FDA0E4E1D2ECFFD0030ED81 /* Embed Frameworks */,
+				7FDA0E4F1D2ED01E0030ED81 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -168,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC2DE001D2D4E2B0062F7B2 /* Expense-long.gif in Resources */,
+				7FDA0E411D2E9DBB0030ED81 /* long1234.png in Resources */,
 				7F2E70361D2D40050094F8EE /* DigitsKitResources.bundle in Resources */,
 				7F5419501D2C50EC0041D47A /* LaunchScreen.storyboard in Resources */,
 				7F54194D1D2C50EC0041D47A /* Assets.xcassets in Resources */,
@@ -192,6 +259,19 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run be38b5cc74fdfdf5317aee1167c9e96eae7763c5 a5d283250e87d8306551aca9c2f348a77b6c063e1673d86f5ed1050c53b3274d";
 		};
+		7FDA0E4F1D2ED01E0030ED81 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,10 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5419481D2C50EC0041D47A /* ViewController.swift in Sources */,
-				7FDA0E331D2DA2210030ED81 /* Payment.swift in Sources */,
+				7FDA0E581D2ED37D0030ED81 /* DisplayPaymentViewController.swift in Sources */,
+				7FDA0E441D2EA2940030ED81 /* NSDate+convertToString.swift in Sources */,
+				7FDA0E5D1D2ED4140030ED81 /* ListPaymentsTableViewCell.swift in Sources */,
 				7F5419461D2C50EC0041D47A /* AppDelegate.swift in Sources */,
-				7FDA0E371D2DA2E50030ED81 /* ParseHelper.swift in Sources */,
+				7FDA0E5A1D2ED37D0030ED81 /* ListPaymentsTableViewController.swift in Sources */,
+				7FDA0E5F1D2ED42B0030ED81 /* RealmHelper.swift in Sources */,
+				7FDA0E5B1D2ED37D0030ED81 /* Payment.swift in Sources */,
+				7FDA0E591D2ED37D0030ED81 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +402,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					RealmSwift.framework,
 				);
 				INFOPLIST_FILE = Expense/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -333,6 +418,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					RealmSwift.framework,
 				);
 				INFOPLIST_FILE = Expense/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
