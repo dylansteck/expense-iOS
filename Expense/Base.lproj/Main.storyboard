@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="1829" y="315"/>
         </scene>
-        <!--Display Payment View Controller-->
+        <!--Add Payment-->
         <scene sceneID="ctO-Zn-bty">
             <objects>
                 <viewController id="Oiv-u8-Wbd" customClass="DisplayPaymentViewController" customModule="Expense" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,47 +100,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLP-Gc-sOh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Edit Payment" id="NZD-7N-L0b">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="K41-DW-UBb"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="MKK-GW-UQI"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Payment Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-K1-XNb">
-                                <rect key="frame" x="251" y="134" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Payment Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-Dg-Xvo">
-                                <rect key="frame" x="240" y="349" width="131" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QV-b0-v6Z">
-                                <rect key="frame" x="251" y="401" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGB-td-1Th">
-                                <rect key="frame" x="156" y="163" width="288" height="146"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Oiv-u8-Wbd" id="F79-fF-Lto"/>
-                                </connections>
-                            </pickerView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mo8-qV-FLI">
+                                <rect key="frame" x="179" y="95" width="222" height="409"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-K1-XNb">
+                                        <rect key="frame" x="51" y="36" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGB-td-1Th">
+                                        <rect key="frame" x="-44" y="75" width="288" height="146"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Oiv-u8-Wbd" id="F79-fF-Lto"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-Dg-Xvo">
+                                        <rect key="frame" x="40" y="242" width="131" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QV-b0-v6Z">
+                                        <rect key="frame" x="51" y="289" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PGB-td-1Th" firstAttribute="centerX" secondItem="RTj-1q-RkP" secondAttribute="centerX" id="2ch-L7-W5M"/>
-                            <constraint firstItem="vDs-Dg-Xvo" firstAttribute="centerX" secondItem="RTj-1q-RkP" secondAttribute="centerX" id="bS0-qY-Qmv"/>
-                            <constraint firstItem="1QV-b0-v6Z" firstAttribute="centerX" secondItem="RTj-1q-RkP" secondAttribute="centerX" id="e8t-2U-oQi"/>
-                            <constraint firstItem="7Ma-K1-XNb" firstAttribute="centerX" secondItem="RTj-1q-RkP" secondAttribute="centerX" id="l5s-7l-XZC"/>
+                            <constraint firstItem="Mo8-qV-FLI" firstAttribute="centerX" secondItem="RTj-1q-RkP" secondAttribute="centerX" id="a8j-JH-Tul"/>
+                            <constraint firstItem="Mo8-qV-FLI" firstAttribute="centerY" secondItem="RTj-1q-RkP" secondAttribute="centerY" id="z2T-7J-Kcl"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Payment" id="6Sd-Qu-iiy">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="4FM-OC-ug9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WBv-Z6-D1L"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="paymentAmountTextField" destination="1QV-b0-v6Z" id="ca9-8W-F7X"/>
                         <outlet property="paymentTypePickerView" destination="PGB-td-1Th" id="olq-vZ-ThX"/>
@@ -148,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNH-sa-z8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491" y="315"/>
+            <point key="canvasLocation" x="2491" y="289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HpO-Uc-XZ9">

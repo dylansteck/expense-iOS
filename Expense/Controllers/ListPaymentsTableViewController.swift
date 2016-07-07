@@ -57,6 +57,13 @@ class ListPaymentsTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
+    
  
     
 }
