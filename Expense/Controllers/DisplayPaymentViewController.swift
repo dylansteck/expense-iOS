@@ -35,7 +35,7 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        
+       
 //        if let payment = payment{
 //            paymentTypePickerView. = payment.type
 //            paymentAmountTextField.text = payment.amount

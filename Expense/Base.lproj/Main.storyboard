@@ -124,7 +124,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QV-b0-v6Z">
                                         <rect key="frame" x="51" y="289" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,7 +138,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Payment" id="6Sd-Qu-iiy">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="4FM-OC-ug9"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="4FM-OC-ug9">
+                            <connections>
+                                <segue destination="X8y-hy-pyc" kind="unwind" unwindAction="unwindToListNotesViewController:" id="nzb-lc-Xsz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="WBv-Z6-D1L"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -148,6 +152,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNH-sa-z8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="X8y-hy-pyc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2491" y="289"/>
         </scene>

@@ -12,6 +12,6 @@ import RealmSwift
 
 class Payment: Object {
     dynamic var type = ""
-    dynamic var amount = ""
+    dynamic var amount = Int()
     dynamic var modificationTime = NSDate()
 }
