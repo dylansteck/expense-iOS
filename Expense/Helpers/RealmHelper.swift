@@ -37,6 +37,7 @@ class RealmHelper {
     
     static func retrievePayments() -> Results<Payment> {
         let realm = try! Realm()
+        print(realm.objects(Payment))
         return realm.objects(Payment).sorted("modificationTime", ascending: false)
     }
 }

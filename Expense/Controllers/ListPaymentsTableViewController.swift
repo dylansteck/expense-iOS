@@ -14,10 +14,14 @@ class ListPaymentsTableViewController: UITableViewController {
 
     //This is calling on results from notes in Realm and reloading the Table View to show the data implemented(showing the notes).
     var payments: Results<Payment>! { didSet { tableView.reloadData() } }
-    override func viewDidLoad() {
-        payments = RealmHelper.retrievePayments()
+    
+    override func viewDidLoad() { payments = RealmHelper.retrievePayments() }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("\(payments.count) rows")
+        return payments.count
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return payments.count }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listPaymentsTableViewCell", forIndexPath: indexPath) as! ListPaymentsTableViewCell
         
@@ -29,6 +33,8 @@ class ListPaymentsTableViewController: UITableViewController {
         
         // 3
         cell.paymentTypeLabel.text = payment.type
+        
+        print("payment = \(payment), type =\(payment.type)")
         
         // 4
         cell.paymentModificationTimeLabel.text = payment.modificationTime.convertToString()

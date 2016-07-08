@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OpJ-PH-wod" customClass="ListPaymentsTableViewCell" customModule="Expense" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listPaymentsTableViewCell" id="OpJ-PH-wod" customClass="ListPaymentsTableViewCell" customModule="Expense" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OpJ-PH-wod" id="5fU-hL-8fK">
@@ -67,7 +67,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="paymentModificationTimeLabel" destination="0VK-Dy-xA9" id="aBP-HP-11t"/>
-                                    <outlet property="paymentTitleLabel" destination="gcI-uO-uVQ" id="IUG-Qq-7Dr"/>
+                                    <outlet property="paymentTypeLabel" destination="gcI-uO-uVQ" id="Qd7-PY-ESS"/>
+                                    <segue destination="Oiv-u8-Wbd" kind="show" identifier="displayPayment" id="ksE-Zr-xvT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,12 +141,12 @@
                     <navigationItem key="navigationItem" title="Add Payment" id="6Sd-Qu-iiy">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="4FM-OC-ug9">
                             <connections>
-                                <segue destination="X8y-hy-pyc" kind="unwind" unwindAction="unwindToListNotesViewController:" id="nzb-lc-Xsz"/>
+                                <segue destination="X8y-hy-pyc" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="nzb-lc-Xsz"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="WBv-Z6-D1L">
                             <connections>
-                                <segue destination="X8y-hy-pyc" kind="unwind" unwindAction="unwindToListNotesViewController:" id="JUT-ZY-QkF"/>
+                                <segue destination="X8y-hy-pyc" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="JUT-ZY-QkF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -180,4 +181,7 @@
     <resources>
         <image name="Expense-long.gif" width="400" height="126"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ksE-Zr-xvT"/>
+    </inferredMetricsTieBreakers>
 </document>

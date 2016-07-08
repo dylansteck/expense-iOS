@@ -10,6 +10,5 @@ import UIKit
 class ListPaymentsTableViewCell: UITableViewCell{
     
     @IBOutlet weak var paymentTypeLabel: UILabel!
-    
     @IBOutlet weak var paymentModificationTimeLabel: UILabel!
 }

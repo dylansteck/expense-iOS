@@ -16,13 +16,27 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var paymentAmountTextField: UITextField!
     var pickerDataSource = ["Credit Card", "Debit Card", "Cash", "Mobile Payment", "Gift Card"]
     
-    var selectedPayment : String = ""
+    var selectedPayment : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.paymentTypePickerView.dataSource = self
         self.paymentTypePickerView.delegate = self
+        
+        self.selectedPayment = self.pickerDataSource[0]
+        
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let payment = payment {
+            // 2
+            self.selectedPayment = payment.type
+            paymentAmountTextField.text = String(payment.amount)
+        }
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -31,7 +45,7 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
         return pickerDataSource.count;
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
         return pickerDataSource[row]
     }
     
@@ -40,21 +54,10 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
         print(pickerDataSource[row])
         
         self.selectedPayment = pickerDataSource[row]
+        print(selectedPayment)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        // 1
-//        if let payment = payment {
-            // 2
-            //pickerDataSource
-            //paymentAmountTextField.text = String(payment.amount)
-//        } else {
-//            // 3
-//            paymentTypePickerView = nil
-//            paymentAmountTextField.text = nil
-//        }
-    }
+   
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
@@ -63,14 +66,23 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
             } else if identifier == "Save" {
                 print("Save button tapped")
                 let payment = Payment()
+                var amountTextField = self.paymentAmountTextField.text!
+                payment.amount = Int(amountTextField)!
+                //payment.amount = Int(self.paymentAmountTextField.text!)!
                 payment.type = self.selectedPayment
-                let listPaymentsTableViewController = segue.destinationViewController as! ListPaymentsTableViewController
-                
-                listPaymentsTableViewController.payments.append(payment)
+                RealmHelper.addPayment(payment)
+              
+            }
+            else {
                 
             }
+             let listPaymentsTableViewController = segue.destinationViewController as! ListPaymentsTableViewController
+            listPaymentsTableViewController.payments = RealmHelper.retrievePayments()
         }
-    }
+                
+        
+        }
+    
    
  }
 
