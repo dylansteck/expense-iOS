@@ -11,7 +11,7 @@ import RealmSwift
 
 
 class ListPaymentsTableViewController: UITableViewController {
-    
+
     //This is calling on results from notes in Realm and reloading the Table View to show the data implemented(showing the notes).
     var payments: Results<Payment>! { didSet { tableView.reloadData() } }
     override func viewDidLoad() {

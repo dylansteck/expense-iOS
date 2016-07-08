@@ -143,7 +143,11 @@
                                 <segue destination="X8y-hy-pyc" kind="unwind" unwindAction="unwindToListNotesViewController:" id="nzb-lc-Xsz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WBv-Z6-D1L"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WBv-Z6-D1L">
+                            <connections>
+                                <segue destination="X8y-hy-pyc" kind="unwind" unwindAction="unwindToListNotesViewController:" id="JUT-ZY-QkF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

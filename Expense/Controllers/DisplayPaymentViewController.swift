@@ -14,12 +14,14 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var paymentTypePickerView: UIPickerView!
 
     @IBOutlet weak var paymentAmountTextField: UITextField!
-    var pickerDataSource = ["Credit Card", "Debit Card", "Cash", "Mobile Payment", "Gift Card"];
+    var pickerDataSource = ["Credit Card", "Debit Card", "Cash", "Mobile Payment", "Gift Card"]
+    
+    var selectedPayment : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.paymentTypePickerView.dataSource = self;
-        self.paymentTypePickerView.delegate = self;
+        self.paymentTypePickerView.dataSource = self
+        self.paymentTypePickerView.delegate = self
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -33,16 +35,24 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
         return pickerDataSource[row]
     }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(row)
+        print(pickerDataSource[row])
+        
+        self.selectedPayment = pickerDataSource[row]
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-       
-//        if let payment = payment{
-//            paymentTypePickerView. = payment.type
-//            paymentAmountTextField.text = payment.amount
-//        }
-//        else {
-//            paymentTypePickerView.text = ""
-//            paymentAmountTextField.text = ""
+        // 1
+//        if let payment = payment {
+            // 2
+            //pickerDataSource
+            //paymentAmountTextField.text = String(payment.amount)
+//        } else {
+//            // 3
+//            paymentTypePickerView = nil
+//            paymentAmountTextField.text = nil
 //        }
     }
     
@@ -52,6 +62,12 @@ class DisplayPaymentViewController: UIViewController, UIPickerViewDataSource, UI
                 print("Cancel button tapped")
             } else if identifier == "Save" {
                 print("Save button tapped")
+                let payment = Payment()
+                payment.type = self.selectedPayment
+                let listPaymentsTableViewController = segue.destinationViewController as! ListPaymentsTableViewController
+                
+                listPaymentsTableViewController.payments.append(payment)
+                
             }
         }
     }
